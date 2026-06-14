@@ -33,4 +33,10 @@ getProgress(goal: any): number {
     (goal.savedAmount / goal.targetAmount) * 100
   );
 }
+showGoal(goal: any) {
+  alert(
+    `${goal.name}
+Progress: ${this.getProgress(goal)}%`
+  );
+}
 }

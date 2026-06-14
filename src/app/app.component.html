@@ -1,19 +1,24 @@
-<h1>Prerna's Pixel Dream World</h1>
+<h1>✨ Prerna's Pixel Dream World ✨</h1>
 
+<div class="world">
 
-@for (goal of goals; track $index) {
-  <div class="goal-card">
-    <div class="progress-bar">
-  <div
-    class="progress-fill"
-    [style.width.%]="getProgress(goal)">
-  </div>
+  @for (goal of goals; track $index) {
+<div
+  class="building"
+  (click)="showGoal(goal)">
+
+      <div class="icon">
+        {{ goal.icon }}
+      </div>
+
+      <div class="name">
+        {{ goal.name }}
+      </div>
+
+      <div class="progress">
+        {{ getProgress(goal) }}%
+      </div>
+    </div>
+  }
+
 </div>
-    <h2>{{ goal.icon }} {{ goal.name }}</h2>
-     <h2>{{ goal.icon }} {{ goal.name }}</h2>
-    <p>Target: ₹{{ goal.targetAmount }}</p>
-    <p>Saved: ₹{{ goal.savedAmount }}</p>
-    <p>Progress: {{ getProgress(goal) }}%</p>
-   
-  </div>
-}
