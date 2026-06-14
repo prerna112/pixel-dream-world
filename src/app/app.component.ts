@@ -27,4 +27,10 @@ export class AppComponent {
     icon: '✈️'
   }
 ];
+
+getProgress(goal: any): number {
+  return Math.round(
+    (goal.savedAmount / goal.targetAmount) * 100
+  );
+}
 }

@@ -3,8 +3,17 @@
 
 @for (goal of goals; track $index) {
   <div class="goal-card">
+    <div class="progress-bar">
+  <div
+    class="progress-fill"
+    [style.width.%]="getProgress(goal)">
+  </div>
+</div>
     <h2>{{ goal.icon }} {{ goal.name }}</h2>
+     <h2>{{ goal.icon }} {{ goal.name }}</h2>
     <p>Target: ₹{{ goal.targetAmount }}</p>
     <p>Saved: ₹{{ goal.savedAmount }}</p>
+    <p>Progress: {{ getProgress(goal) }}%</p>
+   
   </div>
 }
