@@ -1,12 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'pixel-dream-world';
+  goals = [
+  {
+    name: 'Germany Masters',
+    targetAmount: 2500000,
+    savedAmount: 500000,
+    icon: '🏰'
+  },
+  {
+    name: 'Dream House',
+    targetAmount: 10000000,
+    savedAmount: 0,
+    icon: '🏡'
+  },
+  {
+    name: 'Europe Trip',
+    targetAmount: 300000,
+    savedAmount: 20000,
+    icon: '✈️'
+  }
+];
 }
